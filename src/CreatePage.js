@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { createGame } from './services/fetch-utils';
+import { createPony } from './services/fetch-utils';
 
 export default function CreatePage() {
   const history = useHistory();

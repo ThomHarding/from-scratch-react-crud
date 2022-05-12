@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Pony({ pony }) {
   return (
-    <Link to={`/board-games/${pony.id}`}>
+    <Link to={`/ponies/${pony.id}`}>
       <div className='game'>
         <h3>{pony.firstname} {pony.lastname}</h3>
         <p>A {pony.kind} who lives in {pony.location } </p>

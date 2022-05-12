@@ -17,6 +17,7 @@ import { logout } from './services/fetch-utils';
 
 export default function App() {
   const [email, setEmail] = useState();
+  email;
   const [token, setToken] = useState();
 
   useEffect(() => {
