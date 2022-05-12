@@ -5,12 +5,22 @@ import { updatePony } from './services/fetch-utils';
 
 export default function DetailPage() {
   const [pony, setPony] = useState({});
+  const [firstName, setFirstName] = useState('');
+  const [kind, setKind] = useState('');
+  const [location, setLocation] = useState('');
+  const [friends, setFriends] = useState('');
+  const [element, setElement] = useState('');
+
   const id = useRouteMatch('ponies/:id').params.id;
 
   useEffect(() => {
     async function loadData() {
       const ponyData = await getPonyById(id);
       setPony(ponyData);
+      setFormName(eatery.name);
+      setFormCusine(eatery.cuisine);
+      setFormCity(eatery.city);
+      setFormPriceRating(eatery.price_rating);
     }
     loadData();
   }, [id]);
