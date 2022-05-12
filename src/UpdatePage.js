@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { getPonyById, updatePony } from './services/fetch-utils';
 
 export default function DetailPage() {
@@ -8,11 +8,11 @@ export default function DetailPage() {
     firstName: '',
     lastName: '',
     location: '',
-    kind: '',
+    kind: 'Earth Pony',
     element: '',
     friends: '',
   });
-
+  const history = useHistory();
   const { id } = useParams();
 
   useEffect(() => {
@@ -40,28 +40,28 @@ export default function DetailPage() {
 
   return (
     <div className='update'>
-      <form onSubmit={handleUpdate}>
+      <form className='updateForm' onSubmit={handleUpdate}>
         <h2>Update pony</h2>
         <label>
             First Name
           <input
             required
-            name='firstname' 
+            name='firstName' 
             value={updateForm.firstName} 
             onChange={e => setUpdateForm({
               ...updateForm,
-              firstname: e.target.value,
+              firstName: e.target.value,
             })} />
         </label>
         <label>
             Last Name
           <input
             required
-            name='lastname' 
+            name='lastName' 
             value={updateForm.lastName} 
             onChange={e => setUpdateForm({
               ...updateForm,
-              lastname: e.target.value,
+              lastName: e.target.value,
             })} />
         </label>
         <label>
@@ -73,7 +73,7 @@ export default function DetailPage() {
               ...updateForm,
               kind: e.target.value,
             })}>
-            <option>Earth Pony</option>Create
+            <option>Earth Pony</option>
             <option>Unicorn</option>
             <option>Pegasus</option>
             <option>Alicorn</option>
@@ -106,6 +106,7 @@ export default function DetailPage() {
               element: e.target.value,
             })} />
         </label>
+        
         <button>Update pony</button>
       </form>
     </div>

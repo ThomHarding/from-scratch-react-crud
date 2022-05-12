@@ -8,8 +8,8 @@ export default function CreatePage() {
     firstname: '',
     lastname: '',
     location: '',
-    kind: '',
-    element: 0,
+    kind: 'Earth Pony',
+    element: '',
     friends: '',
   });
 
@@ -21,7 +21,7 @@ export default function CreatePage() {
 
   return (
     <div className='create'>
-      <form onSubmit={handleSubmit}>
+      <form className='createForm' onSubmit={handleSubmit}>
         <h2>Add pony</h2>
         <label>
             First Name
