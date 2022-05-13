@@ -10,7 +10,7 @@ export default function CreatePage() {
     location: '',
     kind: 'Earth Pony',
     element: '',
-    friends: '',
+    friends: [],
   });
 
   async function handleSubmit(e) {
@@ -69,15 +69,6 @@ export default function CreatePage() {
               location: e.target.value,
             })} />
         </label>
-        {/* <label>
-            Friends
-          <input required name='friends'
-            value={createForm.friends} 
-            onChange={e => setCreateForm({
-              ...createForm,
-              friends: e.target.value,
-            })} />
-        </label> */}
         <label>
             Element
           <input required name='element'

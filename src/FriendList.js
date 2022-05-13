@@ -17,7 +17,7 @@ export default function ListPage({ id }) {
   return (
     <div className='list friends'>
       { 
-        ponies.map(friend => <Friend key={friend.id} friend={friend} />
+        ponies.map(friend => <Friend key={friend} friend={friend} />
         )
       }
     </div>
