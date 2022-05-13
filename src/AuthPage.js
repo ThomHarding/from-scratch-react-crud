@@ -38,7 +38,7 @@ export default function AuthPage({ setEmail, setToken }) {
   }
 
   return (
-    <div className='auth'>
+    <div className='auth' style={{ backgroundImage: `url("/bg.png")` }}>
       <h1><em>Authorization</em></h1>
       <form onSubmit={handleSignUp}>
         <label>

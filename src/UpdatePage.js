@@ -15,8 +15,6 @@ export default function DetailPage() {
   useEffect(() => {
     async function fetch() {
       const pony = await getPonyById(id);
-
-      // setting the form state based on an async call so that our form comes pre-filled: that's new!
       setFirstNameForm(pony.firstname);
       setLastNameForm(pony.lastname);
       setLocationForm(pony.location);
@@ -43,7 +41,7 @@ export default function DetailPage() {
   return (
     <div className='update'>
       <form className='updateForm' onSubmit={handleUpdate}>
-        <h2>Update pony</h2>
+        <h2>Update {firstName}</h2>
         <label>
             First Name
           <input
