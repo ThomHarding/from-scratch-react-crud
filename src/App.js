@@ -14,6 +14,7 @@ import CreatePage from './CreatePage';
 
 import './App.css';
 import { logout } from './services/fetch-utils';
+import AddFriend from './AddFriend';
 
 export default function App() {
   const [email, setEmail] = useState();
@@ -85,6 +86,13 @@ export default function App() {
               {
                 token
                   ? <CreatePage /> 
+                  : <AuthPage setEmail={setEmail} setToken={setToken} />
+              }
+            </Route>
+            <Route exact path="/AddFriend/:id">
+              {
+                token
+                  ? <AddFriend /> 
                   : <AuthPage setEmail={setEmail} setToken={setToken} />
               }
             </Route>

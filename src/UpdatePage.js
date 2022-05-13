@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useParams, useHistory } from 'react-router-dom';
 import { getPonyById, updatePony } from './services/fetch-utils';
 
@@ -108,6 +109,7 @@ export default function DetailPage() {
         </label>
         
         <button>Update pony</button>
+        <NavLink to={'/AddFriend/' + id}>Add a friend</NavLink>
       </form>
     </div>
   );

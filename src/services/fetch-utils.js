@@ -45,10 +45,20 @@ export async function updatePony(id, updatedPony) {
 
   return checkError(response);
 }
+
 export async function getPonyById(id) {
   const response = await client
     .from('Ponies')
     .select()
+    .match({ id })
+    .single();
+  return checkError(response);    
+}
+
+export async function getFriendsByPonyId(id) {
+  const response = await client
+    .from('Ponies')
+    .select('friends')
     .match({ id })
     .single();
   return checkError(response);    

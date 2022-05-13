@@ -69,7 +69,7 @@ export default function CreatePage() {
               location: e.target.value,
             })} />
         </label>
-        <label>
+        {/* <label>
             Friends
           <input required name='friends'
             value={createForm.friends} 
@@ -77,7 +77,7 @@ export default function CreatePage() {
               ...createForm,
               friends: e.target.value,
             })} />
-        </label>
+        </label> */}
         <label>
             Element
           <input required name='element'
