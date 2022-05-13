@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+html {
+  background-color: RGB(171,233,232);
+  min-height: 100%;
+  width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,10 +22,6 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +37,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.update {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.create {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  text-size-adjust: 14px;
+}
+
+.auth {
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.pony {
+  border: 0.5px solid black;
+  background-color: #fdea9f;
+}
+
+.friend {
+  border: 0.25px dotted black;
+}
+
+.createForm {
+  background-color: #fdea9f;
+  margin: 10px;
+}
+
+.updateForm {
+  background-color: #fdea9f;
+  margin: 10px;
+}
+
+label {
+  padding: 15px;
+}
+
+select {
+  padding-right: 5px;
 }
